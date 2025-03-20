@@ -15,7 +15,7 @@
 
 **...thats a quick summary of who I am**
 
-This is the link to the website I was browsing when I was hungry: https://www.papparich.net.au/ 
+This is the link to the website I was browsing when I was hungry: [Paparich website...Their laxa is bombbbbb](https://www.papparich.net.au/)
 
 A meme that captures how I currently feel about university: ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWxybDhmdHc3cHd3Y2JqZzJncHAzYmJtc3p6YTl3eTcwdTd3a2E3NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1KVaj5UcbHwrBMqI/giphy.gif)
 
