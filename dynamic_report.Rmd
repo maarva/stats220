@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 ## During my time at university I have enjoyed eating sweet treats and the whole process, so I wanted to investigate this little task I get upto in my time.
 
 
-These are my plots, my first plowhich shows the, the reason I am interested in these plots is because I was curious on the number of sweet treats I would since sometimes I would lose track throughout the days. 
+These are my plots, my first plot which shows the, the reason I am interested in these plots is because I was curious on the number of sweet treats I would since sometimes I would lose track throughout the days. 
 
 
 ```{r}
