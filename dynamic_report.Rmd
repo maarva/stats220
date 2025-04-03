@@ -1,0 +1,61 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+
+```
+
+```{css}
+
+```
+
+## During my time at university I have enjoyed eating sweet treats and the whole process, so I wanted to investigate this little task I get upto in my time.
+
+
+These are my plots, my first plowhich shows the, the reason I am interested in these plots is because I was curious on the number of sweet treats I would since sometimes I would lose track throughout the days. 
+
+
+```{r}
+library(tidyverse)
+
+logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTDS720M2fd8gytO6GUbtUSs2YBnvkwJff4e2OEiuSGf0FshxlhtobA-FpoY1oaf_pZKIfDSB5Wo6_N/pub?output=csv")
+
+#https://docs.google.com/spreadsheets/d/e/2PACX-1vTDS720M2fd8gytO6GUbtUSs2YBnvkwJff4e2OEiuSGf0FshxlhtobA-FpoY1oaf_pZKIfDSB5Wo6_N/pub?output=csv
+
+
+
+
+latest_data <- rename(logged_data,
+                      time = 2,
+                      cost = 3,
+                      type = 4,
+                      flavour = 5)
+#in square brackets create a new data frame, you need it to be 
+#a vector by using dollar sign you get a vector, important to know maybe on test
+average_cost <- mean(x = latest_data$cost, na.rm = T)
+
+
+#the minimum cost of a treat for the 3rd index
+low_cost <- min(latest_data[3])
+
+#the maximum cost of the cost coloumn
+high_cost <- max(latest_data$cost)
+
+#There is a ggplot of sweet to savoury and my plot number 1 
+latest_data %>%
+  ggplot() +
+  geom_bar(aes(y = flavour,
+               fill = type,))
+
+#plot number 2 
+latest_data %>%
+  ggplot() + 
+  geom_bar(aes(y = time,
+               fill = flavour))
+
+```
+
+The maximum cost for my sweet treat was `r high_cost` and the lowest cost for my sweet treat was `r low_cost`
