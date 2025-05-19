@@ -1,0 +1,90 @@
+---
+title: When is it snacky snacky time for you?
+output: html_document
+---
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+```
+
+```{js}
+$(function() {
+  $(".level2").css('visibility', 'hidden');
+  $(".level2").first().css('visibility', 'visible');
+  $(".container-fluid").height($(".container-fluid").height() + 300);
+  $(window).on('scroll', function() {
+    $('h2').each(function() {
+      var h2Top = $(this).offset().top - $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (h2Top >= 0 && h2Top <= windowHeight / 2) {
+        $(this).parent('div').css('visibility', 'visible');
+      } else if (h2Top > windowHeight / 2) {
+        $(this).parent('div').css('visibility', 'hidden');
+      }
+    });
+  });
+})
+```
+
+```{css}
+.figcaption {display: none}
+
+body{
+font-family: "Lucida Console";
+background-color: #e7e1ef;
+color:#AA336A;
+text-align: center 
+
+}
+
+
+
+```
+
+
+The data was collected using a Google Form survey, which I shared with my family and friends to gain insight into eating and snacking habits during the work week. This helped provide a clearer picture of the snacking behaviours of those closest to me. From the responses, I was able to explore the frequency of snacking between AM and PM, the consumption of liquid snacks throughout the day, the maximum price people are willing to spend on solid versus liquid snacks, and the most common hours solid foods are consumed.
+
+This data is useful for tracking both eating patterns and food related spending habits.
+## We are comapre the frequency of snakcing between AM and PM
+
+
+
+![Comparison of snacking between AM and PM](plot1.png)
+
+The graph shows a clear visual comparison between the two times of day when snacking can occur. From this, we can see that snacking happens more often during the PM compared to the AM. This makes sense, as most of the survey participants were students who often stay up late studying or cramming for exams.
+
+Ahhh, cramming... I’m so over it!
+
+
+## Distribution of liquid snacks during the time of day
+
+
+![Distribution of liquid snacks during the time of day](plot2.png)
+
+This graph shows how often we sip on a fun little drink throughout different times of the day. It seems that more drinks are consumed at night compared to the afternoon, where liquid snacks are less common. Mornings show the next highest level of consumption, while evenings fall somewhere in the middle. Personally, when I’m cramming, I tend to reach for an energy drink, not my proudest moment. In the mornings, I usually enjoy a nice hot cup of tea or coffee to start the day.
+
+
+## Comaprison between solid and liquid snacks.
+
+![Comaprison between solid and liquid snacks.](plot3.png)
+Solid snacks tend to cost more compared to liquid snacks, this would make sense as drinks are consumed in larger amounts compared to one big solid snack, the max price, seems to go near $20, comapared to liquuid snacks which would cost near $9 
+
+
+
+## Which hour of the day do we eat solid snacks 
+
+![Which hour of the day do we eat solid snacks ](plot4.png)
+
+
+There seems to be a large spike for solid snacks during afternoon time, this would be because naturally you get hungry around then after studying or doing work for long periods of time, or would enjoy a snack around lunch time. Outside of this data point this is seen durin the rush lunch hoour. 
+
+
+## what did i learn from this 
+
+I now have a better understanding of the relationship I have with food and the times I tend to eat. It turns out I’m more of a snacker than I thought, and through my graphs, I was able to identify clear patterns and habits in my eating behaviour. Since this survey was also completed by other students, it reflects how our study or work schedules influence when and how we eat.
+
+![photo](https://i.ytimg.com/vi/kahwpElUSwE/maxresdefault.jpg)
+
+
